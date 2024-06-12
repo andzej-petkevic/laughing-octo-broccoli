@@ -1,6 +1,5 @@
 FROM amazoncorretto:22-alpine AS build
 ENV HOME=/usr/build-dir
-RUN mkdir -p $HOME
 WORKDIR $HOME
 ADD . $HOME
 RUN ./mvnw -f $HOME/pom.xml clean package
