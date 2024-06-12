@@ -14,7 +14,7 @@
   <name>broccoli</name>
   <description>broccoli</description>
   <properties>
-    <java.version>21</java.version>
+    <java.version>22</java.version>
   </properties>
   <dependencies>
     <dependency>
