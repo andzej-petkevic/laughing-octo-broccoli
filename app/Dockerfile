@@ -1,8 +1,7 @@
 FROM amazoncorretto:22-alpine AS build
-ENV HOME=/usr/build-dir
-WORKDIR $HOME
-ADD . $HOME
-RUN ./mvnw -f $HOME/pom.xml clean package
+WORKDIR /usr/build-dir
+ADD . /usr/build-dir
+RUN ./mvnw -f /usr/build-dir/pom.xml clean package
 
 FROM amazoncorretto:22-alpine
 COPY --from=build /usr/build-dir/target/*.jar /app.jar
